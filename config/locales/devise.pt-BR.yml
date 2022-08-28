@@ -46,9 +46,14 @@ pt-BR:
       updated: "Sua conta foi atualizada com sucesso."
       updated_but_not_signed_in: "Sua conta foi atualizada com sucesso. Como sua senha mudou, você precisa refazer o login."
     sessions:
+      already_signed_out: "Saiu com sucesso."
+      forgot_password: "esqueceu sua senha?"
+      login: "Faça seu login"
+      login_with_google: "Login com Google"
+      new_here: "Novo na plataforma?"
+      register: "Criar uma conta"
       signed_in: "Login efetuado com sucesso!"
       signed_out: "Saiu com sucesso."
-      already_signed_out: "Saiu com sucesso."
     unlocks:
       send_instructions: "Dentro de minutos, você receberá um email com instruções para o desbloqueio da sua conta."
       send_paranoid_instructions: "Se sua conta existir, você receberá um e-mail com instruções para desbloqueá-la em alguns minutos."
@@ -64,3 +69,4 @@ pt-BR:
       not_saved:
         one: "Não foi possível salvar %{resource}: 1 erro"
         other: "Não foi possível salvar %{resource}: %{count} erros."
+  or: "ou"

@@ -17,6 +17,7 @@ pt-BR:
         name: "Nome"
         password: "Senha"
         password_confirmation: "Confirmação de senha"
+        remember_me: "Lembre-me"
         status: "Status"
         user_type: "Tipo de usuário"
         updated_at: "Atualizado em"
