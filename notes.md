@@ -1,7 +1,7 @@
 ### Precompile
 ```bash
 # Running
-rake assets:precompile # is compiling and loading the CSS just fine.
+rails assets:precompile # is compiling and loading the CSS just fine.
 ```
 ### Tailwind-css
 ```bash
