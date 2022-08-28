@@ -31,6 +31,14 @@ module Trade4me
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
+    # config/initializers/locale.rb
+    # I18n ==============================================================
+    config.time_zone = 'Brasilia'
+    I18n.load_path += Dir[Rails.root.join('lib', 'locale', '*.{rb,yml}')]
+    I18n.available_locales = [:en, "pt-BR"]
+    I18n.default_locale = "pt-BR"
+    config.encoding = "utf-8"
+
     # Don't generate system test files.
     config.generators.system_tests = nil
   end
