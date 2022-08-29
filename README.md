@@ -1,5 +1,3 @@
-# README
-
 # Trade4me
 
 * ruby version: "3.1.1"

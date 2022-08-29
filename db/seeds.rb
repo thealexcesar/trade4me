@@ -5,6 +5,6 @@ admin = User.new(
   password: PASS,
   password_confirmation: PASS,
   level: 1,
-  phone: "(47)9999-9709"
+  phone: "(47)9999-0000"
 )
 puts admin.save ? "Admin criado." : "Erro ao criar \"admin\" #{admin.errors.full_messages}."
