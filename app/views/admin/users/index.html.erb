@@ -1,0 +1,5 @@
+<div>
+  <%= "Logado" if signed_in? %>
+  <%= current_user&.name.split.first %> <br>
+  <%= current_user.level %>
+</div>

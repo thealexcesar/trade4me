@@ -13,7 +13,7 @@ pt-BR:
             has_many: "Não é possível excluir o registro pois existem %{record} dependentes"
       user:
         created_at: "Criado em"
-        email: "E-mail"
+        email: "email"
         name: "Nome"
         password: "Senha"
         password_confirmation: "Confirmação de senha"
