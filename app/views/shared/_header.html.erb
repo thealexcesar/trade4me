@@ -33,7 +33,7 @@
         </button>
 
         <!-- Profile dropdown -->
-        <div class="ml-3 relative" data-controller="header">
+        <div class="ml-3 relative" data-controller="header" >
           <div>
             <button type="button"
                     class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
@@ -42,18 +42,17 @@
                     aria-haspopup="true"
                     data-header-target="openUserMenu"
             >
-              <span class="sr-only">Open user menu</span>
+              <span class="sr-only"></span>
               <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
             </button>
           </div>
 
           <div
-            class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+            class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none hidden"
             id="menu-dropdown-items"
-            role="menu"
+            role="menu" tabindex="-1"
             aria-orientation="vertical"
             aria-labelledby="user-menu-button"
-            tabindex="-1"
             data-transition-enter="transition ease-out duration-100"
             data-transition-enter-start="transform opacity-0 scale-95"
             data-transition-enter-end="transform opacity-100 scale-100"
@@ -84,3 +83,4 @@
     </div>
   </div>
 </nav>
+<%= render 'shared/modal'%>

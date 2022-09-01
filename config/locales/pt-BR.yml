@@ -1,4 +1,6 @@
 pt-BR:
+  'yes': "Sim"
+  'no': "Não"
   activerecord:
     models:
       user:

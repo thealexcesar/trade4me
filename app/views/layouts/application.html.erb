@@ -12,10 +12,8 @@
   </head>
 
   <body>
-  <header>
-    <%= render 'shared/header' if signed_in? %>
-  </header>
-  <main class="container mx-auto mt-2">
+  <%= render 'shared/header' if signed_in? %>
+  <main>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
