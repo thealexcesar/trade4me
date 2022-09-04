@@ -61,11 +61,16 @@
             data-transition-leave-end="transform opacity-0 scale-95"
           >
             <!-- Active: "bg-gray-100", Not Active: "" -->
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
-            <span href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">
-              <%= link_to "Sign out", destroy_user_session_path, class: '', method: :delete if signed_in? %>
-            </span>
+            <% if signed_in? %>
+              <a href="#" data-header-target="profileLink" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabindex="-1" id="user-menu-item-0"><%= t('general.profile') %></a>
+              <span href="#" data-header-target="logoutLink" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabindex="-1" id="user-menu-item-1">
+                <%= link_to t('general.exit'), destroy_user_session_path, class: '', method: :delete  %>
+              </span>
+            <% else %>
+              <a href="#" id="modal-trigger" data-header-target="userAuthLink" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabindex="-1" id="user-menu-item-0">Login</a>
+              <a href="#" id="modal-trigger" data-header-target="userAuthLink" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabindex="-1" id="user-menu-item-1"><%= t('general.settings') %></a>
+            <% end %>
+
           </div>
         </div>
       </div>
