@@ -16,11 +16,17 @@ pt-BR:
       user:
         created_at: "Criado em"
         email: "Email"
+        levels:
+          admin: "Admin"
+          user: "Comum"
         name: "Nome"
         password: "Senha"
         password_confirmation: "Confirmação de senha"
         remember_me: "Lembre-me"
         status: "Status"
+        statuses:
+          enabled: "Habilitado"
+          disabled: "Desabilitado"
         user_type: "Tipo de usuário"
         updated_at: "Atualizado em"
         user_types:

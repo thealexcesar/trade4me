@@ -11,6 +11,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+div, li, input, button, span, a {
+  outline:none!important;
+}
 body {
   color: $primary;
   //overflow: hidden;

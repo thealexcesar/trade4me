@@ -1,3 +1,4 @@
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to t('devise.sessions.register'), new_registration_path(resource_name) %><br />
+  <small><%= t('devise.sessions.new_here') %></small>
+  <small class="ml-8 text-right"><%= link_to t('devise.sessions.register'), new_registration_path(resource_name) %><br /></small>
 <% end %>

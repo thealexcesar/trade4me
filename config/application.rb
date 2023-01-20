@@ -41,5 +41,8 @@ module Trade4me
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Assets Path
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
   end
 end

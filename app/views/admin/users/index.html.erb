@@ -1,5 +1,31 @@
-<div>
+<div class="mx-auto max-w-screen-xs p-20">
   <%= "Logado" if signed_in? %>
-  <%= current_user&.name.split.first %> <br>
-  <%= current_user.level %>
+<!--  <%#= current_user&.name.split.first %> <br>-->
+  <%#= current_user.level %>
+
+  <table class="table-auto w-full text-sm border border-gray-200">
+    <thead class="bg-gray-100 text-black">
+    <tr>
+      <th class="px-4 py-2"><%= t('activerecord.attributes.user.name') %></th>
+      <th class="px-4 py-2"><%= t('activerecord.attributes.user.email') %></th>
+      <th class="px-4 py-2"><%= t('activerecord.attributes.user.status') %></th>
+      <th class="px-4 py-2"><%= t('activerecord.attributes.user.user_type') %></th>
+    </tr>
+    </thead>
+
+    <% @users.each do |user| %>
+      <tbody>
+        <tr class="text-center hover:bg-gray-200">
+          <%
+            user_avatar = user.avatar_url.blank? ? 'kakaroto.jpg' : user.avatar_url
+            avatar = image_tag(user_avatar, class:'bg-gray-500 mr-4', size: '36x36', style: 'border-radius:50%;')
+          %>
+          <td class="border px-4 py-2 flex items-center"><%= avatar %><%= user&.name %></td>
+          <td class="border px-4 py-2"><%= user&.email %></td>
+          <td class="border px-4 py-2"><%= t("activerecord.attributes.user.statuses.#{user.status}") unless user.status.blank? %></td>
+          <td class="border px-4 py-2"><%= t("activerecord.attributes.user.levels.#{user.level}") unless user.level.blank? %></td>
+        </tr>
+      </tbody>
+    <% end %>
+  </table>
 </div>

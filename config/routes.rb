@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   end
   root to: 'home#index'
   devise_for :users, path: ''
+  # devise_for :users
 end

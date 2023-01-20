@@ -53,8 +53,8 @@
 
             <div class="text-center mt-6">
               <button style="transition: all 0.15s ease 0s;"
-                      class="bg-purple text-white active:bg-gray-700 text-sm font-bold px-6 py-3
-                              rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
+                      class="bg-purple text-white active:bg-gray-700 text-sm font-bold hover:shadow-lg
+                       px-6 py-3 mb-1 rounded shadow outline-none focus:outline-none mr-1 w-full"
               >
                 <%= f.submit "Login" %>
               </button>
@@ -65,8 +65,7 @@
 
         <div>
           <div class="pl-6 pt-0 mt-2">
-            <small><%= t('devise.sessions.new_here') %></small>
-            <small class="ml-8 text-right"><%= render "users/shared/link_sign_up" %></small>
+            <%= render "users/shared/link_sign_up" %>
           </div>
 
           <div class="flex justify-center mt-0">

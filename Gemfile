@@ -1,19 +1,22 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.1"
-gem "rails", "~> 7.0.3", ">= 7.0.3.1"
-gem "sprockets-rails"
+ruby "3.1.2"
+gem 'carrierwave'
+gem 'devise', '~> 4.8', '>= 4.8.1'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
+gem "font-awesome-rails"
+gem "importmap-rails"
+gem "jbuilder"
+gem 'omniauth-google-oauth2'
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
-gem "importmap-rails"
-gem "turbo-rails"
+gem "rails", "~> 7.0.3", ">= 7.0.3.1"
+gem "sassc-rails"
+gem "sprockets-rails"
 gem "stimulus-rails"
 gem "tailwindcss-rails"
-gem "jbuilder"
-gem "sassc-rails"
-gem 'devise', '~> 4.8', '>= 4.8.1'
-gem "font-awesome-sass", "~> 6.2.0"
+gem "turbo-rails"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
