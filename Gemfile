@@ -2,6 +2,7 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
+gem 'aws-sdk-s3', require: false
 gem 'carrierwave'
 gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
@@ -17,7 +18,6 @@ gem "sprockets-rails"
 gem "stimulus-rails"
 gem "tailwindcss-rails"
 gem "turbo-rails"
-
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
