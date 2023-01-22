@@ -35,3 +35,7 @@
 
 # Ignore application configuration
 /config/database.yml
+.idea/trade4me.iml
+
+# AWS
+config/credentials.yml
